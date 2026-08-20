@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+
+@theme {
+    --color-primary-50: #eef7fb;
+    --color-primary-100: #d8edf7;
+    --color-primary-200: #b5ddee;
+    --color-primary-300: #84c4e0;
+    --color-primary-400: #4fa5cf;
+    --color-primary-500: #024367;
+    --color-primary-600: #023b5c;
+    --color-primary-700: #01314d;
+    --color-primary-800: #01273d;
+    --color-primary-900: #001b2c;
+
+    /* Couleurs de marque */
+    --color-primary: #024367;
+    --color-primary-dark: #043349;
+    --color-primary-light: #b8d4e8;
+
+    --color-blue: #2d78b5;
+    --color-blue-accent: #316dc2;
+
+    --color-secondary: #4e7b9a;
+    --color-secondary-light: #eef3f6;
+
+    --color-accent: #ffae00;
+    --color-accent-dark: #d99000;
+
+    /* Neutres */
+    --color-paper: #f7f9fb;
+    --color-ink: #0b1d28;
+    --color-ink-soft: #52616b;
+
+    /* Typographie */
+    --font-display: "Spectral", Georgia, serif;
+    --font-sans: "Inter", ui-sans-serif, system-ui;
+}
+
+/* ==========================================================
+   Composants réutilisables (au-delà des utilitaires simples)
+   ========================================================== */

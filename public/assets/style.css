@@ -1,0 +1,145 @@
+/* ── Topbar ───────────────────────────────────────────── */
+#topbar {
+    background-color: #024367;
+    font-size: 0.78rem;
+    color: #b8d4e8;
+}
+#topbar a {
+    color: #b8d4e8;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+#topbar a:hover {
+    color: #ffffff;
+}
+
+.social-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 9999px;
+    background: rgba(77, 124, 150, 0.28);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+.social-icon:hover {
+    background: rgba(77, 124, 150, 0.65);
+}
+
+/* ── Navbar ───────────────────────────────────────────── */
+#main-navbar {
+    background-color: #ffffff;
+    border-bottom: 2px solid #e5eef5;
+}
+
+/* Logo texte */
+.logo-badge {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #024367 55%, #4d7c96 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+/* Liens nav */
+.nav-link-custom {
+    position: relative;
+    padding: 8px 14px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #334155;
+    border-radius: 7px;
+    transition:
+        color 0.18s,
+        background 0.18s;
+}
+.nav-link-custom:hover {
+    color: #024367;
+    background-color: #eaf1f7;
+}
+.nav-link-custom.active-link {
+    color: #024367;
+    font-weight: 600;
+}
+.nav-link-custom.active-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 14px;
+    right: 14px;
+    height: 2.5px;
+    background: #4d7c96;
+    border-radius: 2px;
+}
+
+/* ── Bouton Faire un don ─────────────────────────────── */
+.btn-don {
+    position: relative;
+    padding: 9px 20px;
+    background-color: #024367;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: donPulse 2.2s ease-in-out infinite;
+    transition: background-color 0.2s;
+}
+.btn-don:hover {
+    background-color: #4d7c96;
+}
+
+/* Bordure animée dégradée */
+.btn-don::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    padding: 2px;
+    background: linear-gradient(90deg, #4d7c96, #b8d4e8, #4d7c96, #024367);
+    background-size: 200% auto;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    animation: borderSlide 2.2s linear infinite;
+}
+.text-rtw {
+    color: #4f7d95;
+}
+
+/*  */
+
+@keyframes donPulse {
+    0%,
+    100% {
+        box-shadow:
+            0 2px 8px rgba(2, 67, 103, 0.22),
+            0 0 0 0 rgba(77, 124, 150, 0.4);
+    }
+    50% {
+        box-shadow:
+            0 4px 18px rgba(2, 67, 103, 0.38),
+            0 0 0 7px rgba(77, 124, 150, 0);
+    }
+}
+
+@keyframes borderSlide {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
